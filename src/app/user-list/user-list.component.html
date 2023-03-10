@@ -1,0 +1,22 @@
+<h1>Listes des utilisateurs</h1>
+<!--<ul>
+
+  <li *ngFor="let U of users">{{U.id}} {{U.nomComplet}} {{U.email}} {{U.service}} {{U.departement}} {{U.direction}} {{U.profession}} {{U.id}} {{U.id}} {{U.id}}</li>
+</ul>-->
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Email</th>
+    <th>profession</th>
+    <th>Détails</th>
+  </tr>
+
+  <tr *ngFor="let U of users; let i = index">
+    <td>{{U.nomComplet}}</td>
+    <td>{{U.email}}</td>
+    <td>{{U.profession}}</td>
+    <td><button class="btn btn-sm btn-warning" (click)="showUserDetails(U.id)">details</button></td>
+  </tr>
+
+
+</table>
